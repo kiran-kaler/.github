@@ -5,12 +5,12 @@ on:
     branches:
       - main
 
+env:  # Define workflow-level variables here
+  MY_WORKFLOW_VARIABLE: "This is a workflow-level variable"
+
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    env:  
-      MY_WORKFLOW_VARIABLE: "This is a workflow-level variable"
 
     steps:
     - name: Checkout code
@@ -32,4 +32,4 @@ jobs:
     - name: Deploy
       if: success()
       run: |
-
+        # Add deployment steps here
