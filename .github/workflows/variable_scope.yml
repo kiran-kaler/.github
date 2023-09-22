@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    env:  # Define job-level variables here
+    env:  
       MY_JOB_VARIABLE: "This is a job-level variable"
 
     steps:
@@ -32,4 +32,4 @@ jobs:
     - name: Deploy
       if: success()
       run: |
-        # Add deployment steps here
+        
